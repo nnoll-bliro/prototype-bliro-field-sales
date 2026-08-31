@@ -15,6 +15,14 @@
     "transcription": {
       "title": "Live transcription",
       "description": "Transcribe a conversation and attach it to a calendar event."
+    },
+    "customers": {
+      "title": "Customers",
+      "description": "Search and open every customer in the territory."
+    },
+    "customerDetail": {
+      "title": "{{company}}",
+      "description": "Customer data, meetings and conversations for {{company}}."
     }
   },
   "admin": {
@@ -39,7 +47,7 @@
   },
   "calendar": {
     "greeting": "Hi {{name}}",
-    "dateSummary": "Tuesday, 18 June · 2 meetings",
+    "dateSummary": "{{date}} · 2 meetings",
     "pre": {
       "heading": "Next meeting",
       "timeBadge": "In 28 min",
@@ -123,5 +131,57 @@
         "meta": "Monday, 10:30"
       }
     ]
+  },
+  "customers": {
+    "title": "Customers",
+    "summary": "{{count}} customers in your territory",
+    "searchLabel": "Search customers",
+    "searchPlaceholder": "Company or contact",
+    "clearSearchLabel": "Clear search",
+    "pinnedHeading": "Recently worked on",
+    "allHeading": "All customers",
+    "resultsHeading": "{{count}} results for “{{query}}”",
+    "resultsHeadingOne": "1 result for “{{query}}”",
+    "noResultsTitle": "No customer found for “{{query}}”",
+    "noResultsBody": "Check the spelling, or show all customers again.",
+    "showAllAction": "Show all customers",
+    "lastContact": "Last contact {{date}}",
+    "noContactYet": "No contact yet",
+    "industries": {
+      "aviation": "Aviation",
+      "energy": "Energy",
+      "manufacturing": "Machinery",
+      "construction": "Construction",
+      "logistics": "Logistics",
+      "automotive": "Automotive",
+      "agriculture": "Agriculture",
+      "buildingTech": "Building technology"
+    },
+    "roles": {
+      "headOfMaintenance": "Head of maintenance",
+      "purchasingLead": "Head of purchasing",
+      "opsManager": "Operations manager",
+      "plantManager": "Plant manager",
+      "technicalDirector": "Technical director",
+      "siteManager": "Site manager",
+      "procurementManager": "Procurement manager",
+      "serviceLead": "Service lead"
+    }
+  },
+  "customerDetail": {
+    "backLabel": "Back to customers",
+    "companyDataHeading": "Company data",
+    "industryLabel": "Industry",
+    "locationLabel": "Location",
+    "contactLabel": "Primary contact",
+    "lastContactLabel": "Last contact",
+    "lastContactNone": "None yet",
+    "meetingsHeading": "Meetings",
+    "upcomingHeading": "Upcoming",
+    "pastHeading": "Past",
+    "meetingsEmpty": "No meetings with this customer yet.",
+    "chatsHeading": "Chats & artifacts",
+    "chatsEmpty": "No conversations about this customer yet.",
+    "chatsHint": "Conversations with Vicky and the notes they produce will appear here."
   }
 }

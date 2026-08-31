@@ -4,6 +4,9 @@ import { notFound } from "next/navigation";
 import deDictionary from "../_dictionaries/de.json";
 import enDictionary from "../_dictionaries/en.json";
 
+// Re-exported so existing server callers keep one import site.
+export { interpolateCopy } from "./interpolate";
+
 export const calendarLocales = ["de", "en"] as const;
 export const calendarPhases = ["pre", "now", "post"] as const;
 
@@ -28,13 +31,4 @@ export function requireCalendarLocale(locale: string): CalendarLocale {
 
 export function getCalendarDictionary(locale: string): CalendarDictionary {
   return dictionaries[requireCalendarLocale(locale)];
-}
-
-export function interpolateCopy(
-  template: string,
-  values: Record<string, string | number>,
-): string {
-  return template.replace(/\{\{(\w+)\}\}/g, (match, key: string) =>
-    Object.hasOwn(values, key) ? String(values[key]) : match,
-  );
 }

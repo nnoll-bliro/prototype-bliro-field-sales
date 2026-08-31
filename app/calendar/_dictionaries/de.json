@@ -15,6 +15,14 @@
     "transcription": {
       "title": "Live-Transkription",
       "description": "Ein Gespräch live transkribieren und einem Termin zuordnen."
+    },
+    "customers": {
+      "title": "Kunden",
+      "description": "Alle Kunden im Gebiet suchen und öffnen."
+    },
+    "customerDetail": {
+      "title": "{{company}}",
+      "description": "Kundendaten, Termine und Unterhaltungen zu {{company}}."
     }
   },
   "admin": {
@@ -39,7 +47,7 @@
   },
   "calendar": {
     "greeting": "Hallo {{name}}",
-    "dateSummary": "Dienstag, 18. Juni · 2 Termine",
+    "dateSummary": "{{date}} · 2 Termine",
     "pre": {
       "heading": "Nächster Termin",
       "timeBadge": "In 28 Min.",
@@ -123,5 +131,57 @@
         "meta": "Montag, 10:30"
       }
     ]
+  },
+  "customers": {
+    "title": "Kunden",
+    "summary": "{{count}} Kunden in deinem Gebiet",
+    "searchLabel": "Kunde suchen",
+    "searchPlaceholder": "Firma oder Ansprechpartner",
+    "clearSearchLabel": "Suche löschen",
+    "pinnedHeading": "Zuletzt bearbeitet",
+    "allHeading": "Alle Kunden",
+    "resultsHeading": "{{count}} Treffer für „{{query}}“",
+    "resultsHeadingOne": "1 Treffer für „{{query}}“",
+    "noResultsTitle": "Kein Kunde gefunden für „{{query}}“",
+    "noResultsBody": "Prüfe die Schreibweise oder zeige wieder alle Kunden an.",
+    "showAllAction": "Alle Kunden anzeigen",
+    "lastContact": "Zuletzt {{date}}",
+    "noContactYet": "Noch kein Kontakt",
+    "industries": {
+      "aviation": "Luftfahrt",
+      "energy": "Energie",
+      "manufacturing": "Maschinenbau",
+      "construction": "Bau",
+      "logistics": "Logistik",
+      "automotive": "Automobil",
+      "agriculture": "Landtechnik",
+      "buildingTech": "Gebäudetechnik"
+    },
+    "roles": {
+      "headOfMaintenance": "Leiter Instandhaltung",
+      "purchasingLead": "Einkaufsleitung",
+      "opsManager": "Betriebsleitung",
+      "plantManager": "Werksleitung",
+      "technicalDirector": "Technische Leitung",
+      "siteManager": "Bauleitung",
+      "procurementManager": "Beschaffung",
+      "serviceLead": "Serviceleitung"
+    }
+  },
+  "customerDetail": {
+    "backLabel": "Zurück zu Kunden",
+    "companyDataHeading": "Firmendaten",
+    "industryLabel": "Branche",
+    "locationLabel": "Standort",
+    "contactLabel": "Ansprechpartner",
+    "lastContactLabel": "Letzter Kontakt",
+    "lastContactNone": "Noch keiner",
+    "meetingsHeading": "Termine",
+    "upcomingHeading": "Anstehend",
+    "pastHeading": "Vergangen",
+    "meetingsEmpty": "Noch keine Termine mit diesem Kunden.",
+    "chatsHeading": "Chats & Artefakte",
+    "chatsEmpty": "Noch keine Unterhaltungen zu diesem Kunden.",
+    "chatsHint": "Gespräche mit Vicky und die daraus erzeugten Notizen erscheinen hier."
   }
 }

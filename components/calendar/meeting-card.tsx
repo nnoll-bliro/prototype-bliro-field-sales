@@ -1,8 +1,11 @@
-import Image from "next/image";
+import { CompanyLogo } from "@/components/calendar/company-logo";
 
 type MeetingCardProps = {
   time: string;
-  logoSrc: string;
+  // Optional: companies without artwork in `public/logos/` fall back to the
+  // initials monogram that `CompanyLogo` renders in the same slot.
+  logoSrc?: string;
+  initials?: string;
   company: string;
   person: string;
   // Omit for the compressed state — e.g. a past meeting with nothing left
@@ -13,20 +16,6 @@ type MeetingCardProps = {
   embedded?: boolean;
 };
 
-function CompanyLogo({ logoSrc }: { logoSrc: string }) {
-  return (
-    <div className="flex size-11 shrink-0 items-center justify-center rounded-xl border border-border bg-white p-1.5">
-      <Image
-        src={logoSrc}
-        alt=""
-        width={64}
-        height={64}
-        className="size-full object-contain"
-      />
-    </div>
-  );
-}
-
 // Logo + company + "time · person" — identical in both states. Real
 // meeting titles run long, so this row never makes room for anything
 // past those two lines: no inline button, no third field. Anything more
@@ -35,12 +24,13 @@ function CompanyLogo({ logoSrc }: { logoSrc: string }) {
 function MeetingSummary({
   time,
   logoSrc,
+  initials,
   company,
   person,
 }: Omit<MeetingCardProps, "action" | "embedded">) {
   return (
     <div className="flex min-w-0 flex-1 items-center gap-4">
-      <CompanyLogo logoSrc={logoSrc} />
+      <CompanyLogo logoSrc={logoSrc} initials={initials} />
       <div className="min-w-0 flex-1">
         <p className="break-words text-base font-bold leading-6 text-heading">
           {company}
@@ -70,6 +60,7 @@ function MeetingSummary({
 export function MeetingCard({
   time,
   logoSrc,
+  initials,
   company,
   person,
   action,
@@ -81,6 +72,7 @@ export function MeetingCard({
         <MeetingSummary
           time={time}
           logoSrc={logoSrc}
+          initials={initials}
           company={company}
           person={person}
         />
@@ -99,6 +91,7 @@ export function MeetingCard({
       <MeetingSummary
         time={time}
         logoSrc={logoSrc}
+        initials={initials}
         company={company}
         person={person}
       />
