@@ -4,6 +4,10 @@
 
 Turn the existing German pre-meeting and during-meeting calendars into one extensible prototype under `/calendar/{language}/{phase}`. Reuse one component tree for German and English, with prototype copy loaded from small JSON dictionaries and room for future sub-pages.
 
+## Completion Summary
+
+Completed the bilingual calendar route tree, shared JSON copy, prototype controls, legacy redirects, and repository documentation.
+
 ## Notes
 
 - The playground remains one Next.js app; `/calendar` is one prototype namespace, not a separate package or deployment.
