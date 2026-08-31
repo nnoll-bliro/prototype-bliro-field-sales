@@ -1,0 +1,77 @@
+{
+  "metadata": {
+    "pre": {
+      "title": "Calendar before the meeting",
+      "description": "The calendar view before the next customer meeting."
+    },
+    "now": {
+      "title": "Meeting in progress",
+      "description": "The calendar view during an active customer meeting."
+    },
+    "post": {
+      "title": "Calendar after the meeting",
+      "description": "The calendar view after a customer meeting."
+    }
+  },
+  "admin": {
+    "label": "Prototype",
+    "ariaLabel": "Control prototype",
+    "languageLabel": "Language",
+    "phaseLabel": "Jump in time",
+    "languages": {
+      "de": "German",
+      "en": "English"
+    },
+    "phases": {
+      "pre": "Prior to meeting",
+      "now": "During meeting",
+      "post": "Post meeting"
+    }
+  },
+  "calendar": {
+    "greeting": "Hi {{name}}",
+    "dateSummary": "Tuesday, 18 June · 2 meetings",
+    "pre": {
+      "heading": "Next meeting",
+      "timeBadge": "In 28 min",
+      "action": "Prepare for meeting"
+    },
+    "now": {
+      "heading": "Current meeting",
+      "timeBadge": "In progress",
+      "person": "With {{person}}",
+      "location": "On site at {{company}}",
+      "action": "Transcribe now"
+    },
+    "later": {
+      "heading": "Later today"
+    },
+    "followUp": {
+      "heading": "1 follow-up to finish",
+      "subtitle": "From yesterday",
+      "action": "Complete follow-up"
+    }
+  },
+  "navigation": {
+    "ariaLabel": "Main navigation",
+    "calendar": "Today",
+    "route": "Plan day",
+    "customers": "Customers",
+    "vicky": "Vicky",
+    "microphoneAriaLabel": "Start a live transcription",
+    "unavailable": "Not available in this prototype yet",
+    "unavailableShort": "Soon"
+  },
+  "vickyActionSheet": {
+    "title": "How would you like Vicky to help?",
+    "closeLabel": "Close",
+    "prepareDescription": "Vicky can help you prepare for your {{company}} meeting with {{person}}.",
+    "followUpDescription": "Vicky can help you wrap up your {{company}} meeting with {{person}}.",
+    "callLabel": "Call Vicky",
+    "callDescription": "Speak with Vicky on the phone",
+    "chatLabel": "Chat with Vicky",
+    "chatDescription": "Write messages at your own pace",
+    "callFeedback": "Call selected. In the working product, Vicky would call you now.",
+    "chatFeedback": "Chat selected. In the working product, your chat with Vicky would open now."
+  }
+}

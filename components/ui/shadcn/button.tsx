@@ -25,14 +25,14 @@ const LoadingSpinner = () => (
 );
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md font-semibold tracking-[-0.02em] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-lg font-semibold tracking-[-0.02em] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-5 [&_svg]:shrink-0",
   {
     variants: {
       variant: {
         default:
-          "bg-primary text-primary-foreground hover:bg-primary/90 active:bg-primary/80",
+          "bg-primary/85 text-primary-foreground hover:bg-primary/75 active:bg-primary/65",
         primary:
-          "bg-primary text-primary-foreground hover:bg-primary/90 active:bg-primary/80",
+          "bg-primary/85 text-primary-foreground hover:bg-primary/75 active:bg-primary/65",
         destructive:
           "bg-destructive-subtle text-destructive-foreground hover:bg-destructive-subtle/70",
         outline:
@@ -43,11 +43,11 @@ const buttonVariants = cva(
         link: "h-auto rounded-none p-0 text-primary underline-offset-4 hover:underline",
       },
       size: {
-        default: "h-9 px-4 text-sm",
-        sm: "h-8 px-3 text-xs",
-        md: "h-9 px-4 text-sm",
-        lg: "h-11 px-6 text-base",
-        icon: "size-9",
+        default: "min-h-12 px-5 text-base",
+        sm: "min-h-11 px-4 text-sm",
+        md: "min-h-12 px-5 text-base",
+        lg: "min-h-14 px-6 text-base",
+        icon: "size-12",
       },
     },
     defaultVariants: {
@@ -109,7 +109,7 @@ const Button = React.forwardRef<
           </>
         ) : (
           <>
-            {Icon && <Icon className="h-3.5 w-3.5" aria-hidden="true" />}
+            {Icon && <Icon className="size-5" aria-hidden="true" />}
             {children}
           </>
         )}

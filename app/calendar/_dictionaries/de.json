@@ -1,0 +1,77 @@
+{
+  "metadata": {
+    "pre": {
+      "title": "Kalender vor dem Termin",
+      "description": "Die Kalenderansicht vor dem nächsten Kundentermin."
+    },
+    "now": {
+      "title": "Laufender Termin",
+      "description": "Die Kalenderansicht während eines laufenden Kundentermins."
+    },
+    "post": {
+      "title": "Kalender nach dem Termin",
+      "description": "Die Kalenderansicht nach einem Kundentermin."
+    }
+  },
+  "admin": {
+    "label": "Prototyp",
+    "ariaLabel": "Prototyp steuern",
+    "languageLabel": "Sprache",
+    "phaseLabel": "Zeitpunkt wechseln",
+    "languages": {
+      "de": "Deutsch",
+      "en": "Englisch"
+    },
+    "phases": {
+      "pre": "Vor dem Termin",
+      "now": "Während des Termins",
+      "post": "Nach dem Termin"
+    }
+  },
+  "calendar": {
+    "greeting": "Hallo {{name}}",
+    "dateSummary": "Dienstag, 18. Juni · 2 Termine",
+    "pre": {
+      "heading": "Nächster Termin",
+      "timeBadge": "In 28 Min.",
+      "action": "Termin vorbereiten"
+    },
+    "now": {
+      "heading": "Aktueller Termin",
+      "timeBadge": "Läuft gerade",
+      "person": "Mit {{person}}",
+      "location": "Vor Ort bei {{company}}",
+      "action": "Jetzt transkribieren"
+    },
+    "later": {
+      "heading": "Später am Tag"
+    },
+    "followUp": {
+      "heading": "1 offene Nachbereitung",
+      "subtitle": "Von gestern",
+      "action": "Nachbereitung abschließen"
+    }
+  },
+  "navigation": {
+    "ariaLabel": "Hauptnavigation",
+    "calendar": "Heute",
+    "route": "Route",
+    "customers": "Kunden",
+    "vicky": "Vicky",
+    "microphoneAriaLabel": "Live-Transkription starten",
+    "unavailable": "In diesem Prototyp noch nicht verfügbar",
+    "unavailableShort": "Bald"
+  },
+  "vickyActionSheet": {
+    "title": "Wie möchtest du mit Vicky weitermachen?",
+    "closeLabel": "Schließen",
+    "prepareDescription": "Vicky hilft dir bei der Vorbereitung auf deinen Termin bei {{company}} mit {{person}}.",
+    "followUpDescription": "Vicky hilft dir bei der Nachbereitung deines Termins bei {{company}} mit {{person}}.",
+    "callLabel": "Vicky anrufen",
+    "callDescription": "Direkt mit Vicky telefonieren",
+    "chatLabel": "Mit Vicky chatten",
+    "chatDescription": "In Ruhe Nachrichten schreiben",
+    "callFeedback": "Anruf ausgewählt. Im fertigen Produkt würde Vicky dich jetzt anrufen.",
+    "chatFeedback": "Chat ausgewählt. Im fertigen Produkt würde sich jetzt dein Chat mit Vicky öffnen."
+  }
+}

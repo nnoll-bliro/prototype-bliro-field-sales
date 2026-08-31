@@ -32,7 +32,7 @@ const PageEyebrow = React.forwardRef<
   <p
     ref={ref}
     className={cn(
-      "text-[0.6875rem] font-bold uppercase leading-4 tracking-[-0.006875rem] text-muted-foreground",
+      "text-sm font-bold uppercase leading-5 tracking-[0.04em] text-muted-foreground",
       className,
     )}
     {...props}
@@ -62,7 +62,7 @@ const PageDescription = React.forwardRef<
   <p
     ref={ref}
     className={cn(
-      "max-w-2xl text-sm leading-[1.375rem] tracking-[-0.0175rem] text-muted-foreground",
+      "max-w-2xl text-base leading-6 text-muted-foreground",
       className,
     )}
     {...props}

@@ -3,17 +3,8 @@
 import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { LiveTranscriptionOverlay } from "@/components/transcription/live-transcription-overlay";
-import type { MeetingScenario, MeetingView } from "@/libs/mock-meetings";
 
-type TranscriptionViewProps = {
-  meeting: MeetingView;
-  scenario: MeetingScenario;
-};
-
-export function TranscriptionView({
-  meeting,
-  scenario,
-}: TranscriptionViewProps) {
+export function GermanCurrentTranscriptionView() {
   const router = useRouter();
   const [stopping, setStopping] = useState(false);
   const stopTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -29,20 +20,21 @@ export function TranscriptionView({
     if (stopping) return;
     setStopping(true);
     stopTimeout.current = setTimeout(() => {
-      router.replace(
-        `/home?scenario=${scenario}&saved=1&meeting=${encodeURIComponent(meeting.id)}`,
-      );
+      router.replace("/calendar-now-de");
     }, 450);
   };
 
   return (
     <LiveTranscriptionOverlay
-      eyebrow={meeting.title}
-      title={meeting.customer}
-      subtitle={`with ${meeting.contact}`}
-      onClose={() => router.replace(`/home?scenario=${scenario}`)}
+      attachBeforeSave={false}
+      eyebrow="Aktueller Termin"
+      footerNote="Das Transkript wird automatisch dem Lufthansa-Termin zugeordnet."
+      locale="de"
+      onClose={() => router.replace("/calendar-now-de")}
       onStop={stopTranscription}
       stopping={stopping}
+      subtitle="Mit Tim Berger · vor Ort"
+      title="Lufthansa"
     />
   );
 }

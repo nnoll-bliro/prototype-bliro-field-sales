@@ -280,7 +280,7 @@ export default function ExamplePage() {
                   <CardTitle asChild>
                     <h2>Recent meetings</h2>
                   </CardTitle>
-                  <CardDescription>Your latest recordings and summaries.</CardDescription>
+                  <CardDescription>Your latest transcriptions and summaries.</CardDescription>
                 </div>
                 <Button variant="ghost" size="sm">
                   View all <ArrowRight />

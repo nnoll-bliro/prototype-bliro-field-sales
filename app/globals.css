@@ -59,8 +59,9 @@ body {
   background: hsl(var(--background));
   color: hsl(var(--foreground));
   font-family: "Inter Variable", Inter, Arial, Helvetica, sans-serif;
-  font-size: 0.875rem;
-  line-height: 1.375rem;
+  /* Inclusive baseline: operational text starts at 16px and remains zoomable. */
+  font-size: 1rem;
+  line-height: 1.5rem;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
