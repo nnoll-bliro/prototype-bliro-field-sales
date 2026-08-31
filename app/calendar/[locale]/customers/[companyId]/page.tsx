@@ -57,6 +57,7 @@ export default async function CustomerDetailPage({
           copy={copy.navigation}
           destinations={{
             calendar: `/calendar/${locale}/now`,
+            actions: `/calendar/${locale}/actions`,
             customers: `/calendar/${locale}/customers`,
             microphone: `/calendar/${locale}/transcription`,
           }}

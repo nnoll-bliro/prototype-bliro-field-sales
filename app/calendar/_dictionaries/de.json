@@ -16,6 +16,10 @@
       "title": "Live-Transkription",
       "description": "Ein Gespräch live transkribieren und einem Termin zuordnen."
     },
+    "actions": {
+      "title": "Aktionen",
+      "description": "Offene Aktionen zu deinen Kunden prüfen und abschließen."
+    },
     "customers": {
       "title": "Kunden",
       "description": "Alle Kunden im Gebiet suchen und öffnen."
@@ -72,12 +76,39 @@
   "navigation": {
     "ariaLabel": "Hauptnavigation",
     "calendar": "Heute",
-    "route": "Route",
+    "actions": "Aktionen",
     "customers": "Kunden",
     "vicky": "Vicky",
     "microphoneAriaLabel": "Live-Transkription starten",
     "unavailable": "In diesem Prototyp noch nicht verfügbar",
     "unavailableShort": "Bald"
+  },
+  "actions": {
+    "title": "Aktionen",
+    "summary": "{{count}} Aktionen brauchen dich",
+    "summaryOne": "1 Aktion braucht dich",
+    "allDone": "Alles erledigt",
+    "kinds": {
+      "reviewVisitReport": "Besuchsbericht prüfen",
+      "sendFollowUpEmail": "Follow-up-E-Mail senden",
+      "reviewQuote": "Angebot prüfen"
+    },
+    "preparedBy": "Von {{agent}} vorbereitet",
+    "noCustomerHeading": "Ohne Kunde",
+    "reviewAction": "Als geprüft markieren",
+    "reviewActionFull": "{{action}} für {{customer}} als geprüft markieren",
+    "reviewActionOnly": "{{action}} als geprüft markieren",
+    "completeAction": "Abschließen",
+    "completeActionFull": "{{action}} für {{customer}} abschließen",
+    "completeActionOnly": "{{action}} abschließen",
+    "doneStatus": "Erledigt",
+    "undoAction": "Rückgängig",
+    "undoActionFull": "{{action}} für {{customer}} wieder öffnen",
+    "undoActionOnly": "{{action}} wieder öffnen",
+    "doneDisclosure": "{{count}} erledigt",
+    "doneDisclosureOne": "1 erledigt",
+    "emptyTitle": "Nichts offen",
+    "emptyBody": "Sobald ein Termin nachbereitet wird, erscheinen die Aktionen hier."
   },
   "vickyActionSheet": {
     "title": "Wie möchtest du mit Vicky weitermachen?",

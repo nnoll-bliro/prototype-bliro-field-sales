@@ -2,14 +2,14 @@ import Image from "next/image";
 import Link from "next/link";
 import {
   CalendarDays,
+  ListChecks,
   Mic,
-  Navigation,
   UsersRound,
   type LucideIcon,
 } from "lucide-react";
 import { cn } from "@/libs/utils";
 
-type NavItemId = "calendar" | "route" | "customers" | "vicky";
+type NavItemId = "calendar" | "actions" | "customers" | "vicky";
 
 type NavItem = {
   id: NavItemId;
@@ -22,7 +22,7 @@ type NavItem = {
 export type BottomNavCopy = {
   ariaLabel: string;
   calendar: string;
-  route: string;
+  actions: string;
   customers: string;
   vicky: string;
   microphoneAriaLabel: string;
@@ -32,7 +32,7 @@ export type BottomNavCopy = {
 
 export type BottomNavDestinations = {
   calendar?: string;
-  route?: string;
+  actions?: string;
   customers?: string;
   vicky?: string;
   microphone?: string;
@@ -122,10 +122,10 @@ export function BottomNav({
       icon: CalendarDays,
     },
     {
-      id: "route",
-      label: copy.route,
-      href: destinations.route,
-      icon: Navigation,
+      id: "actions",
+      label: copy.actions,
+      href: destinations.actions,
+      icon: ListChecks,
     },
     {
       id: "customers",

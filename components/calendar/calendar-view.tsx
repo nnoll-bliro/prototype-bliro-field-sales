@@ -55,6 +55,7 @@ export function CalendarView({ copy, locale, phase }: CalendarViewProps) {
   // Same screen from every phase and every entry point.
   const transcriptionHref = `/calendar/${locale}/transcription`;
   const customersHref = `/calendar/${locale}/customers`;
+  const actionsHref = `/calendar/${locale}/actions`;
 
   return (
     <CalendarScreen
@@ -64,6 +65,7 @@ export function CalendarView({ copy, locale, phase }: CalendarViewProps) {
           copy={copy.navigation}
           destinations={{
             calendar: calendarHref,
+            actions: actionsHref,
             customers: customersHref,
             microphone: transcriptionHref,
           }}

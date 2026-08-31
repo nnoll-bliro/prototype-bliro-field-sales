@@ -32,7 +32,7 @@ import {
 const wikiBottomNavCopy = {
   ariaLabel: "Main navigation",
   calendar: "Today",
-  route: "Plan day",
+  actions: "Actions",
   customers: "Customers",
   vicky: "Vicky",
   microphoneAriaLabel: "Start a live transcription",

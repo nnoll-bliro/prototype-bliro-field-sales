@@ -16,6 +16,10 @@
       "title": "Live transcription",
       "description": "Transcribe a conversation and attach it to a calendar event."
     },
+    "actions": {
+      "title": "Actions",
+      "description": "Review and complete the open actions for your customers."
+    },
     "customers": {
       "title": "Customers",
       "description": "Search and open every customer in the territory."
@@ -72,12 +76,39 @@
   "navigation": {
     "ariaLabel": "Main navigation",
     "calendar": "Today",
-    "route": "Plan day",
+    "actions": "Actions",
     "customers": "Customers",
     "vicky": "Vicky",
     "microphoneAriaLabel": "Start a live transcription",
     "unavailable": "Not available in this prototype yet",
     "unavailableShort": "Soon"
+  },
+  "actions": {
+    "title": "Actions",
+    "summary": "{{count}} actions need you",
+    "summaryOne": "1 action needs you",
+    "allDone": "All done",
+    "kinds": {
+      "reviewVisitReport": "Review the visit report",
+      "sendFollowUpEmail": "Send the follow-up email",
+      "reviewQuote": "Review the quote"
+    },
+    "preparedBy": "Prepared by {{agent}}",
+    "noCustomerHeading": "No customer",
+    "reviewAction": "Mark as reviewed",
+    "reviewActionFull": "Mark {{action}} for {{customer}} as reviewed",
+    "reviewActionOnly": "Mark {{action}} as reviewed",
+    "completeAction": "Complete",
+    "completeActionFull": "Complete {{action}} for {{customer}}",
+    "completeActionOnly": "Complete {{action}}",
+    "doneStatus": "Done",
+    "undoAction": "Undo",
+    "undoActionFull": "Reopen {{action}} for {{customer}}",
+    "undoActionOnly": "Reopen {{action}}",
+    "doneDisclosure": "{{count}} done",
+    "doneDisclosureOne": "1 done",
+    "emptyTitle": "Nothing open",
+    "emptyBody": "Actions show up here as soon as a meeting gets wrapped up."
   },
   "vickyActionSheet": {
     "title": "How would you like Vicky to help?",
