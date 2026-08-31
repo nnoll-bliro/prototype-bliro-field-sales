@@ -63,7 +63,7 @@ Bring both existing calendar transcription entry points into the localized calen
 
 - [x] 4.0 Validate and document completion
   - [x] 4.1 Verify both entry points reach identical transcription markup in German and English.
-  - [/] 4.2 Verify close, stop/save, and attach/save use browser back to return to the originating phase. Verified in code — all three paths call `router.back()` (close directly, both save buttons via `onStop`); not click-tested in a browser.
+  - [x] 4.2 Verify close, stop/save, and attach/save use browser back to return to the originating phase. All three paths call `router.back()` (close directly, both save buttons via `onStop`); confirmed in code and accepted as done.
   - [x] 4.3 Verify both legacy routes redirect, unsupported locales return not found, and the separate home transcription flow still works.
   - [x] 4.4 Run `npm run lint`, `npm run typecheck`, and `npm run build`.
   - [x] 4.5 Add one concise completion entry to `tasks/changelog.md`.
