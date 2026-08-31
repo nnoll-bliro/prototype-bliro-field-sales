@@ -11,6 +11,10 @@
     "post": {
       "title": "Calendar after the meeting",
       "description": "The calendar view after a customer meeting."
+    },
+    "transcription": {
+      "title": "Live transcription",
+      "description": "Transcribe a conversation and attach it to a calendar event."
     }
   },
   "admin": {
@@ -26,6 +30,11 @@
       "pre": "Prior to meeting",
       "now": "During meeting",
       "post": "Post meeting"
+    },
+    "phaseShort": {
+      "pre": "Before",
+      "now": "Now",
+      "post": "After"
     }
   },
   "calendar": {
@@ -73,5 +82,46 @@
     "chatDescription": "Write messages at your own pace",
     "callFeedback": "Call selected. In the working product, Vicky would call you now.",
     "chatFeedback": "Chat selected. In the working product, your chat with Vicky would open now."
+  },
+  "transcription": {
+    "title": "Live transcription",
+    "close": "Close live transcription",
+    "connectionQuestion": "Bad connection?",
+    "useVoiceNote": "Use voice note",
+    "dismiss": "Dismiss",
+    "inProgress": "Transcription in progress",
+    "elapsedTime": "Elapsed time",
+    "stop": "Stop & save",
+    "stopping": "Saving transcription…",
+    "footer": "You choose the matching event in the next step.",
+    "offlineNote": "Saved as a voice note — we'll transcribe it once you're back online.",
+    "attachTitle": "Attach to an event",
+    "attachDescription": "Link this transcript to a meeting so it's easy to find later.",
+    "chooseEvent": "Choose an event",
+    "suggested": "Suggested based on your calendar.",
+    "attachAndSave": "Attach & save",
+    "saveWithoutEvent": "Save without an event",
+    "events": [
+      {
+        "id": "lufthansa-1215",
+        "label": "Lufthansa · Tim Berger",
+        "meta": "12:15"
+      },
+      {
+        "id": "otis-1530",
+        "label": "Otis · Stefan Müller",
+        "meta": "15:30"
+      },
+      {
+        "id": "rosen-yesterday",
+        "label": "ROSEN Group · Igor Petrov",
+        "meta": "Yesterday, 14:00"
+      },
+      {
+        "id": "lufthansa-monday",
+        "label": "Lufthansa · Kilian Weber",
+        "meta": "Monday, 10:30"
+      }
+    ]
   }
 }

@@ -1,11 +1,7 @@
-import type { Metadata } from "next";
-import { GermanCurrentTranscriptionView } from "@/components/calendar/german-current-transcription-view";
+import { redirect } from "next/navigation";
 
-export const metadata: Metadata = {
-  title: "Live-Transkription",
-  description: "Den laufenden Lufthansa-Termin live transkribieren.",
-};
-
-export default function GermanCurrentTranscriptionPage() {
-  return <GermanCurrentTranscriptionView />;
+// Legacy German current-meeting route: the canonical screen is
+// /calendar/{locale}/transcription.
+export default function LegacyGermanTranscriptionPage() {
+  redirect("/calendar/de/transcription");
 }

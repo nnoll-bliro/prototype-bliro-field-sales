@@ -2,6 +2,10 @@
 
 import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
+import {
+  englishTranscriptionCopy,
+  englishTranscriptionEvents,
+} from "@/components/transcription/english-copy";
 import { LiveTranscriptionOverlay } from "@/components/transcription/live-transcription-overlay";
 import type { MeetingScenario, MeetingView } from "@/libs/mock-meetings";
 
@@ -37,6 +41,8 @@ export function TranscriptionView({
 
   return (
     <LiveTranscriptionOverlay
+      copy={englishTranscriptionCopy}
+      events={englishTranscriptionEvents}
       eyebrow={meeting.title}
       title={meeting.customer}
       subtitle={`with ${meeting.contact}`}

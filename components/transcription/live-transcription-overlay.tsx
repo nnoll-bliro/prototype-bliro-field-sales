@@ -28,81 +28,36 @@ export type TranscriptionEventOption = {
   meta?: string;
 };
 
-// Falls back to today's calendar so the attach step still has something
-// sensible to propose when a caller (e.g. the freestanding mic FAB) isn't
-// tied to a specific meeting already.
-const defaultEventOptions: TranscriptionEventOption[] = [
-  { id: "lufthansa-1215", label: "Lufthansa · Tim Berger", meta: "12:15" },
-  { id: "otis-1530", label: "Otis · Stefan Müller", meta: "15:30" },
-  {
-    id: "rosen-yesterday",
-    label: "ROSEN Group · Igor Petrov",
-    meta: "Yesterday, 14:00",
-  },
-  {
-    id: "lufthansa-monday",
-    label: "Lufthansa · Kilian Weber",
-    meta: "Monday, 10:30",
-  },
-];
+export type TranscriptionOverlayCopy = {
+  close: string;
+  connectionQuestion: string;
+  useVoiceNote: string;
+  dismiss: string;
+  inProgress: string;
+  elapsedTime: string;
+  stop: string;
+  stopping: string;
+  footer: string;
+  offlineNote: string;
+  attachTitle: string;
+  attachDescription: string;
+  chooseEvent: string;
+  suggested: string;
+  attachAndSave: string;
+  saveWithoutEvent: string;
+};
 
 export type LiveTranscriptionOverlayProps = {
+  copy: TranscriptionOverlayCopy;
+  events: readonly TranscriptionEventOption[];
   eyebrow?: string;
   title: string;
   subtitle?: string;
   onClose: () => void;
   onStop: () => void;
   attachBeforeSave?: boolean;
-  locale?: "en" | "de";
   stopping?: boolean;
-  stopLabel?: string;
-  stoppingLabel?: string;
-  footerNote?: string;
-  events?: TranscriptionEventOption[];
   proposedEventId?: string;
-};
-
-const transcriptionCopy = {
-  en: {
-    close: "Close live transcription",
-    connectionQuestion: "Bad connection?",
-    useVoiceNote: "Use voice note",
-    dismiss: "Dismiss",
-    inProgress: "Transcription in progress",
-    elapsedTime: "Elapsed time",
-    stop: "Stop & save",
-    stopping: "Saving transcription…",
-    footer: "Your transcript will be saved to this meeting.",
-    offlineNote:
-      "Saved as a voice note — we'll transcribe it once you're back online.",
-    attachTitle: "Attach to an event",
-    attachDescription:
-      "Link this transcript to a meeting so it's easy to find later.",
-    chooseEvent: "Choose an event",
-    suggested: "Suggested based on your calendar.",
-    attachAndSave: "Attach & save",
-    saveWithoutEvent: "Save without an event",
-  },
-  de: {
-    close: "Live-Transkription schließen",
-    connectionQuestion: "Schlechte Verbindung?",
-    useVoiceNote: "Sprachnotiz nutzen",
-    dismiss: "Ausblenden",
-    inProgress: "Transkription läuft",
-    elapsedTime: "Vergangene Zeit",
-    stop: "Stoppen und speichern",
-    stopping: "Transkription wird gespeichert…",
-    footer: "Das Transkript wird diesem Termin zugeordnet.",
-    offlineNote:
-      "Als Sprachnotiz gespeichert — wir transkribieren sie, sobald du wieder online bist.",
-    attachTitle: "Mit einem Termin verknüpfen",
-    attachDescription:
-      "Ordne das Transkript einem Termin zu, damit du es später leicht wiederfindest.",
-    chooseEvent: "Termin auswählen",
-    suggested: "Basierend auf deinem Kalender vorgeschlagen.",
-    attachAndSave: "Verknüpfen und speichern",
-    saveWithoutEvent: "Ohne Termin speichern",
-  },
 };
 
 // Full-screen transcription UI: light card-based theme (matches the rest of
@@ -112,24 +67,17 @@ const transcriptionCopy = {
 // "start transcribing" entry point (e.g. a mic FAB) can reuse the same
 // look without owning routing/timer logic.
 export function LiveTranscriptionOverlay({
+  copy,
+  events,
   eyebrow,
   title,
   subtitle,
   onClose,
   onStop,
   attachBeforeSave = true,
-  locale = "en",
   stopping = false,
-  stopLabel,
-  stoppingLabel,
-  footerNote,
-  events = defaultEventOptions,
-  proposedEventId = defaultEventOptions[0]?.id,
+  proposedEventId = events[0]?.id,
 }: LiveTranscriptionOverlayProps) {
-  const copy = transcriptionCopy[locale];
-  const resolvedStopLabel = stopLabel ?? copy.stop;
-  const resolvedStoppingLabel = stoppingLabel ?? copy.stopping;
-  const resolvedFooterNote = footerNote ?? copy.footer;
   const [elapsedSeconds, setElapsedSeconds] = useState(0);
   const [connectionBannerDismissed, setConnectionBannerDismissed] =
     useState(false);
@@ -269,16 +217,16 @@ export function LiveTranscriptionOverlay({
                   }
                 }}
                 disabled={stopping}
-                aria-label={stopping ? resolvedStoppingLabel : resolvedStopLabel}
+                aria-label={stopping ? copy.stopping : copy.stop}
                 className="flex size-20 items-center justify-center rounded-full bg-primary text-white shadow-popover transition-colors hover:bg-primary/90 active:bg-primary/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
               >
                 <Square className="size-6 fill-current" aria-hidden="true" />
               </button>
               <p className="mt-4 text-sm font-semibold text-heading">
-                {stopping ? resolvedStoppingLabel : resolvedStopLabel}
+                {stopping ? copy.stopping : copy.stop}
               </p>
               <p className="mt-1 text-center text-xs text-muted-foreground">
-                {voiceNoteMode ? copy.offlineNote : resolvedFooterNote}
+                {voiceNoteMode ? copy.offlineNote : copy.footer}
               </p>
             </div>
           </>
@@ -332,7 +280,7 @@ export function LiveTranscriptionOverlay({
                 onClick={onStop}
                 disabled={stopping}
               >
-                {stopping ? resolvedStoppingLabel : copy.attachAndSave}
+                {stopping ? copy.stopping : copy.attachAndSave}
               </Button>
               <button
                 type="button"

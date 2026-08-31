@@ -1,11 +1,6 @@
-import type { Metadata } from "next";
-import { CalendarLiveTranscriptionView } from "@/components/calendar/live-transcription-view";
+import { redirect } from "next/navigation";
 
-export const metadata: Metadata = {
-  title: "Live transcription",
-  description: "Transcribe a conversation and attach it to a calendar event.",
-};
-
-export default function CalendarTranscriptionPage() {
-  return <CalendarLiveTranscriptionView />;
+// Legacy unlocalized route: the canonical screen is /calendar/{locale}/transcription.
+export default function LegacyCalendarTranscriptionPage() {
+  redirect("/calendar/en/transcription");
 }

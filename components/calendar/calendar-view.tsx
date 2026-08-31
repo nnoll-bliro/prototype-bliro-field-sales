@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Mic } from "lucide-react";
 import type {
   CalendarDictionary,
@@ -48,18 +49,20 @@ function getVickyCopy(
 export function CalendarView({ copy, locale, phase }: CalendarViewProps) {
   const showsCurrentMeeting = phase !== "pre";
   const calendarHref = `/calendar/${locale}/${phase}`;
+  // Same screen from every phase and every entry point.
+  const transcriptionHref = `/calendar/${locale}/transcription`;
 
   return (
     <main lang={locale} className="min-h-dvh bg-muted text-foreground">
       <div className="mx-auto min-h-dvh w-full max-w-[620px] bg-background">
-        <div className="px-5 pb-32 pt-[max(1rem,env(safe-area-inset-top))] sm:px-8">
+        <div className="relative px-5 pb-32 pt-[max(4rem,calc(env(safe-area-inset-top)+3rem))] sm:px-8">
           <header>
             <PrototypeControls
               copy={copy.admin}
               locale={locale}
               phase={phase}
             />
-            <div className="mt-8">
+            <div>
               <h1 className="text-[2rem] font-bold leading-10 tracking-[-0.035em] text-heading">
                 {interpolateCopy(copy.calendar.greeting, { name: "Niko" })}
               </h1>
@@ -91,20 +94,13 @@ export function CalendarView({ copy, locale, phase }: CalendarViewProps) {
                   company: "Lufthansa",
                 })}
                 action={
-                  <div className="space-y-2">
-                    <button
-                      type="button"
-                      disabled
-                      aria-label={`${copy.calendar.now.action}. ${copy.navigation.unavailable}`}
-                      className="flex min-h-16 w-full cursor-not-allowed items-center justify-center gap-3 rounded-xl border border-primary bg-primary/70 px-6 text-lg font-bold text-primary-foreground opacity-70 shadow-card"
-                    >
-                      <Mic className="size-6" aria-hidden="true" />
-                      {copy.calendar.now.action}
-                    </button>
-                    <p className="text-center text-sm text-muted-foreground">
-                      {copy.navigation.unavailable}
-                    </p>
-                  </div>
+                  <Link
+                    href={transcriptionHref}
+                    className="flex min-h-16 w-full items-center justify-center gap-3 rounded-xl border border-primary bg-primary px-6 text-lg font-bold text-primary-foreground shadow-card transition-colors hover:bg-primary/90 active:bg-primary/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                  >
+                    <Mic className="size-6" aria-hidden="true" />
+                    {copy.calendar.now.action}
+                  </Link>
                 }
               />
             </section>
@@ -190,7 +186,10 @@ export function CalendarView({ copy, locale, phase }: CalendarViewProps) {
 
         <BottomNav
           copy={copy.navigation}
-          destinations={{ calendar: calendarHref }}
+          destinations={{
+            calendar: calendarHref,
+            microphone: transcriptionHref,
+          }}
         />
       </div>
     </main>

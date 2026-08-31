@@ -11,6 +11,10 @@
     "post": {
       "title": "Kalender nach dem Termin",
       "description": "Die Kalenderansicht nach einem Kundentermin."
+    },
+    "transcription": {
+      "title": "Live-Transkription",
+      "description": "Ein Gespräch live transkribieren und einem Termin zuordnen."
     }
   },
   "admin": {
@@ -26,6 +30,11 @@
       "pre": "Vor dem Termin",
       "now": "Während des Termins",
       "post": "Nach dem Termin"
+    },
+    "phaseShort": {
+      "pre": "Vor",
+      "now": "Jetzt",
+      "post": "Nach"
     }
   },
   "calendar": {
@@ -73,5 +82,46 @@
     "chatDescription": "In Ruhe Nachrichten schreiben",
     "callFeedback": "Anruf ausgewählt. Im fertigen Produkt würde Vicky dich jetzt anrufen.",
     "chatFeedback": "Chat ausgewählt. Im fertigen Produkt würde sich jetzt dein Chat mit Vicky öffnen."
+  },
+  "transcription": {
+    "title": "Live-Transkription",
+    "close": "Live-Transkription schließen",
+    "connectionQuestion": "Schlechte Verbindung?",
+    "useVoiceNote": "Sprachnotiz nutzen",
+    "dismiss": "Ausblenden",
+    "inProgress": "Transkription läuft",
+    "elapsedTime": "Vergangene Zeit",
+    "stop": "Stoppen und speichern",
+    "stopping": "Transkription wird gespeichert…",
+    "footer": "Im nächsten Schritt wählst du den passenden Termin.",
+    "offlineNote": "Als Sprachnotiz gespeichert — wir transkribieren sie, sobald du wieder online bist.",
+    "attachTitle": "Mit einem Termin verknüpfen",
+    "attachDescription": "Ordne das Transkript einem Termin zu, damit du es später leicht wiederfindest.",
+    "chooseEvent": "Termin auswählen",
+    "suggested": "Basierend auf deinem Kalender vorgeschlagen.",
+    "attachAndSave": "Verknüpfen und speichern",
+    "saveWithoutEvent": "Ohne Termin speichern",
+    "events": [
+      {
+        "id": "lufthansa-1215",
+        "label": "Lufthansa · Tim Berger",
+        "meta": "12:15"
+      },
+      {
+        "id": "otis-1530",
+        "label": "Otis · Stefan Müller",
+        "meta": "15:30"
+      },
+      {
+        "id": "rosen-yesterday",
+        "label": "ROSEN Group · Igor Petrov",
+        "meta": "Gestern, 14:00"
+      },
+      {
+        "id": "lufthansa-monday",
+        "label": "Lufthansa · Kilian Weber",
+        "meta": "Montag, 10:30"
+      }
+    ]
   }
 }
