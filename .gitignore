@@ -33,3 +33,6 @@ pnpm-debug.log*
 # OS and editor files
 .DS_Store
 *.pem
+
+# Local Netlify folder
+.netlify
